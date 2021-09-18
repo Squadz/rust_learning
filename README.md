@@ -2,4 +2,5 @@
 
 Personal repository to study Rust (programming language)
 
-Exercise : Convert temperatures between Fahrenheit and Celsius
+Exercises : 
+1. Convert temperatures between Fahrenheit and Celsius
