@@ -8,7 +8,6 @@ fn main() {
         println!("2. Celsius to Fahrenheit");
         
         let mut menu_selection = String::new();
-
         io::stdin()
             .read_line(&mut menu_selection)
             .expect("Failed to read line");
@@ -38,13 +37,10 @@ fn main() {
         };
         
         // Temperature conversion and return the result
-        if menu_selection == 1 {
-            let converted_temperature = far2cel(temperature);
-            println!("{} Fahrenheit = {} Celcius", temperature, converted_temperature)
-
-        } else if menu_selection == 2 {
-            let converted_temperature = cel2far(temperature);
-            println!("{} Celcius = {} Fahrenheit", temperature, converted_temperature)
+        match menu_selection {
+            1 => println!("{} Fahrenheit = {} Celcius", temperature, far2cel(temperature)),
+            2 => println!("{} Celcius = {} Fahrenheit", temperature, cel2far(temperature)),
+            _ => println!("Unable to convert"),
         };
         break;
     };
